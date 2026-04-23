@@ -6,7 +6,6 @@ This repository contains my notes and learnings on system design(HLD)
 
 * Topic-wise system design notes
 * High level architecture designs
-* Low level design of selected systems
 * Real-world application design examples
 
 ## Author
