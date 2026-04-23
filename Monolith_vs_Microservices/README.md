@@ -1,37 +1,34 @@
-# 🚀 Microservices vs Monolith Architecture
-
-## ✍️ Author  
-**AyushM**
+# Microservices vs Monolith Architecture
 
 ---
 
-## 🌟 Overview
+## Overview
 
 This document explains:
 
 - Monolithic Architecture  
 - Microservices Architecture  
-- Migration from Monolith → Microservices  
+- Migration from Monolith to Microservices  
 - Key Design Patterns  
 
 ---
 
-# 🧱 Monolithic Architecture
+# Monolithic Architecture
 
 <p align="center">
   <img src="./assests/monolith_vsms.png" width="600"/>
 </p>
 
-### 📌 Definition
+### Definition
 
 Monolithic architecture is a type of architecture where **all modules of an application are kept inside a single codebase**.
 
-- All modules are **tightly coupled**
-- Entire system is deployed as one unit
+- All modules are tightly coupled  
+- Entire system is deployed as one unit  
 
 ---
 
-### 🧠 Example: E-commerce Application
+### Example: E-commerce Application
 
 Modules:
 - Auth  
@@ -39,40 +36,39 @@ Modules:
 - Order  
 - Payment  
 
-👉 If **one module fails (e.g., Payment)**  
-❌ The whole application may crash
+If one module fails (e.g., Payment), the whole application may crash.
 
 ---
 
-### ⚠️ Problems
+### Problems
 
-#### ❌ Tight Coupling
-- Modules depend on each other heavily
+#### Tight Coupling
+- Modules depend heavily on each other  
 
-#### 🚨 Single Point of Failure
-- One failure can break the entire system
+#### Single Point of Failure
+- One failure can break the entire system  
 
-#### 🔁 Deployment Bottleneck
-- Small change → full application redeployment
+#### Deployment Bottleneck
+- Even a small change requires full application redeployment  
 
-#### 📈 Scaling Issue
+#### Scaling Issue
 
 Example:
 - Payment → 5 lakh requests  
 - Auth → 5k requests  
 
-👉 Still, entire application must scale → **higher cost**
+The entire application must still be scaled, which increases cost.
 
 ---
 
-### ⚡ Myth
+### Myth
 
-> ❌ Monolith cannot scale  
-> ✔️ It can scale, but only as a whole system
+Monolith cannot scale — Incorrect.  
+It can scale, but only as a whole system.
 
 ---
 
-### ✅ When to Use
+### When to Use
 
 - Small applications  
 - Low traffic systems  
@@ -80,19 +76,19 @@ Example:
 
 ---
 
-# ⚙️ Microservices Architecture
+# Microservices Architecture
 
 <p align="center">
   <img src="./assests/microservices_img.png" width="600"/>
 </p>
 
-### 📌 Definition
+### Definition
 
-Microservices architecture breaks an application into **independent services**, where each service handles a specific functionality.
+Microservices architecture breaks an application into independent services, where each service handles a specific functionality.
 
 ---
 
-### 🔑 Key Features
+### Key Features
 
 - Loosely coupled services  
 - Independent deployment  
@@ -100,27 +96,26 @@ Microservices architecture breaks an application into **independent services**, 
 
 ---
 
-### 🧠 Example
+### Example
 
 Services:
 - User Service  
 - Payment Service  
 
-👉 If Payment fails  
-✅ User service still works
+If Payment fails, the User service continues to work.
 
 ---
 
-### 🚀 Advantages
+### Advantages
 
-- 🔄 Independent deployment  
-- 📈 Individual scaling  
-- 💸 Cost efficient  
-- 🧩 Fault isolation  
+- Independent deployment  
+- Individual scaling  
+- Cost efficient  
+- Fault isolation  
 
 ---
 
-### ⚠️ Challenges
+### Challenges
 
 - Complex system design  
 - Network latency  
@@ -129,26 +124,26 @@ Services:
 
 ---
 
-# 🔥 Monolith vs Microservices
+# Monolith vs Microservices
 
 <p align="center">
   <img src="./assests/coupling_diff.png" width="600"/>
 </p>
 
-| Feature          | Monolith 🧱 | Microservices ⚙️ |
-|-----------------|------------|------------------|
-| Codebase        | Single     | Multiple         |
-| Coupling        | Tight      | Loose            |
-| Deployment      | Full App   | Per Service      |
-| Scaling         | Whole App  | Individual       |
-| Failure Impact  | High       | Low              |
-| Complexity      | Low        | High             |
+| Feature          | Monolith       | Microservices   |
+|------------------|---------------|-----------------|
+| Codebase         | Single        | Multiple        |
+| Coupling         | Tight         | Loose           |
+| Deployment       | Full App      | Per Service     |
+| Scaling          | Whole App     | Individual      |
+| Failure Impact   | High          | Low             |
+| Complexity       | Low           | High            |
 
 ---
 
-# 🔄 Monolith → Microservices Migration
+# Monolith to Microservices Migration
 
-### 🧠 Example (Udemy-like System)
+### Example (Udemy-like System)
 
 Modules:
 - Auth  
@@ -156,11 +151,11 @@ Modules:
 - Cart  
 - Courses  
 
-👉 Convert **Payment module → Payment service**
+Convert the Payment module into a Payment service.
 
 ---
 
-### 🛠️ Steps
+### Steps
 
 1. Identify high-impact modules  
 2. Define API contracts  
@@ -168,56 +163,51 @@ Modules:
    - REST / gRPC (Synchronous)
    - RabbitMQ / Kafka (Asynchronous)  
 4. Extract module into service  
-5. Monitoring & optimization  
+5. Monitoring and optimization  
 6. Scaling  
 
 ---
 
-# 🚦 Canary Deployment
+# Canary Deployment
 
-- Start by routing small traffic to new service  
-- Example:
-  - 90% → Monolith  
-  - 10% → Microservice  
+- Start by routing a small percentage of traffic to the new service  
 
-👉 Gradually increase if stable  
+Example:
+- 90% → Monolith  
+- 10% → Microservice  
+
+Gradually increase traffic if the system remains stable.
 
 ---
 
-# 🌿 Strangler Design Pattern
+# Strangler Design Pattern
 
-- Gradually replace monolith parts  
-- Controlled via routing layer  
+- Gradually replace parts of the monolith  
+- Controlled using a routing layer  
 
-👉 Example:
+Example:
 - 90% traffic → Monolith  
 - 10% → New service  
 
 ---
 
-# 🔄 Distributed Transactions
+# Distributed Transactions
 
-## 🔁 Saga Pattern
+## Saga Pattern
 
 - Series of local transactions  
-- Uses rollback (compensation) if failure occurs  
+- Uses compensating actions if a failure occurs  
 
 ---
 
-## 📦 Outbox Pattern
+## Outbox Pattern
 
 - Ensures data consistency  
-- Stores event + data in same transaction  
+- Stores event and data in the same transaction  
 
 ---
 
-# 🏁 Conclusion
+# Conclusion
 
-✔️ Start with **Monolith** for simplicity  
-✔️ Move to **Microservices** when scaling is needed  
-
----
-
-## 💡 Pro Tip
-
-> “Microservices are an evolution, not a starting point.”
+Start with Monolith for simplicity.  
+Move to Microservices when scaling and system complexity increase.
