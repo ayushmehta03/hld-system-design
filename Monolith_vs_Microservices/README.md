@@ -1,6 +1,6 @@
-🚀 Microservices vs Monolith Architecture
+Microservices vs Monolith Architecture
 📚 High Level Design Notes
-<p align="center"> <img src="https://miro.medium.com/v2/resize:fit:1400/1*Jz6F6z8P0q5gJ7n3hQ1XQg.png" width="600"/> </p>
+<p align="center"> <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Microservices.png" width="600"/> </p>
 ✍️ Author
 AyushM
 🌟 Overview
@@ -11,7 +11,7 @@ This repository contains structured notes on:
 🚦 Deployment Techniques
 🧠 Design Patterns (Strangler, Saga, Outbox)
 🧱 Monolithic Architecture
-<p align="center"> <img src="https://miro.medium.com/v2/resize:fit:1400/1*8f0nFQp7E0YwXzVq7Z4n8A.png" width="600"/> </p>
+<p align="center"> <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Monolithic_Architecture.png" width="600"/> </p>
 📌 Definition
 A Monolithic Architecture is a system where all components are combined into a single codebase and deployed together.
 🔑 Key Characteristics
@@ -43,7 +43,7 @@ Low traffic systems
 ❌ "Monolith cannot scale"
 ✔️ It can scale, but only as a whole system
 ⚙️ Microservices Architecture
-<p align="center"> <img src="https://miro.medium.com/v2/resize:fit:1400/1*Jz6F6z8P0q5gJ7n3hQ1XQg.png" width="600"/> </p>
+<p align="center"> <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Microservices_vs_Monolithic.png" width="600"/> </p>
 📌 Definition
 Microservices architecture divides an application into independent services, each handling a specific function.
 🔑 Key Characteristics
@@ -82,14 +82,14 @@ Extract service
 Monitor performance
 Scale independently
 🚦 Canary Deployment
-<p align="center"> <img src="https://miro.medium.com/v2/resize:fit:1400/1*0dS9VvP5x2XkK1Yt5yQz6A.png" width="600"/> </p>
+<p align="center"> <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Canary_Release.png" width="600"/> </p>
 📌 Concept
 Gradually release new service to users:
 10% → New Service
 90% → Old System
 👉 Increase traffic only if stable
 🌿 Strangler Design Pattern
-<p align="center"> <img src="https://miro.medium.com/v2/resize:fit:1400/1*Vd7zGz3z7kKz2n2y8gk5vw.png" width="600"/> </p>
+<p align="center"> <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Strangler_pattern.png" width="600"/> </p>
 📌 Concept
 Gradually replace monolith with microservices
 90% → Monolith
@@ -97,11 +97,11 @@ Gradually replace monolith with microservices
 👉 Controlled via routing layer
 🔄 Distributed Transactions
 🔁 Saga Pattern
-<p align="center"> <img src="https://miro.medium.com/v2/resize:fit:1400/1*Ykz3sXwz0K7d3xQw9X5zTg.png" width="600"/> </p>
+<p align="center"> <img src="https://upload.wikimedia.org/wikipedia/commons/5/52/Saga_Pattern.png" width="600"/> </p>
 Sequence of local transactions
 Uses compensating actions on failure
 📦 Outbox Pattern
-<p align="center"> <img src="https://miro.medium.com/v2/resize:fit:1400/1*Qm3yZzv0Q7yY3y2Zk7Yz9Q.png" width="600"/> </p>
+<p align="center"> <img src="https://raw.githubusercontent.com/oskardudycz/EventSourcing.NetCore/master/docs/outbox-pattern.png" width="600"/> </p>
 Ensures data consistency
 Writes event + data in same transaction
 🆚 Final Comparison
