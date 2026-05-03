@@ -1,6 +1,6 @@
 # High Level Design 
 
-This repository contains my notes and learnings on system design(HLD)
+This repository contains my notes and learnings on system design(HLD).
 
 ## Contents
 
